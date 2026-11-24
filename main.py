@@ -27,7 +27,7 @@ def main():
         written = f.read()
     if written != line + "\n":
         raise SystemExit("read-back mismatch after write")
-    print(f"wrote {len(line)} characters to {path}")
+    print(f"wrote {len(line)} characters ({len(written.encode('utf-8'))} bytes) to {path}")
 
 
 if __name__ == "__main__":
